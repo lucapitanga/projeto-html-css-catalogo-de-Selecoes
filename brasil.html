@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Brasil</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+    * {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+  body {
+    margin: 0;
+    background-color: #fff;
+  }
+    header {
+      background-color: #dbb900;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      position: fixed;
+   }
+
+    
+    header>img {
+      width: 7%;
+      height: 100px;
+      padding: 10px 20px;
+      float: left;
+      }
+
+    header>.vazio{
+      width: 760px;
+      height: auto;
+    }
+
+    header>.vazio>h1{
+      text-align: center;
+      margin-top: 30px;
+      color: #fff;
+    }
+
+    header>nav {
+      display: flex;
+    }
+    
+    header>nav>ul{
+      display: flex;
+      margin-top: 40px;
+    }
+    
+    header>nav>ul>li {
+      float: left;
+      list-style: none;
+      padding: 10px 20px;
+      justify-content: center;
+      position: relative;
+    }
+
+    header>nav>ul>li>a,header>nav>ul>li>a:visited {
+      text-decoration: none;
+      color: #fff;
+      position: relative;
+      box-sizing: border-box;]
+      font-weight: 600;
+    }
+
+    header>nav>ul>li>a::before {
+      content:"";
+      width: 0;
+      height: 1px;
+      background-color: #fff;
+      position: absolute;
+    }
+
+    header>nav>ul>li>a:hover::before, header>nav>ul>li>a:active::before {
+      transition: 0.3s ease-out all;
+      width: 100%;
+    }
+
+    header>nav>ul>li>ul {
+      padding-left: 0;
+      text-align: center;
+      display: none;
+      position: absolute;
+      width: 80px;
+    }
+
+    header>nav>ul>li:hover>ul {
+      display: block;
+    }
+
+    header>nav>ul>li>ul>li {
+      list-style: none;
+      position: relative;
+    }
+
+header>nav>ul>li>ul>li>a,header>nav>ul>li>ul>li>a:visited {
+      padding: 10px 10px;
+      float: left;  
+      text-decoration: none;
+      color: #fff;
+      width: 80px;
+      background: #dbb900;
+      font-size: 14px;
+    }
+
+    .main-posts {
+      width: 70%;
+      float: left;
+      margin-top: 160px;
+    }
+
+    .main-posts>.post {
+      float: left;
+      width: 100%;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+    .main-posts>.post>img {
+      width: 100%;
+    }
+
+    .main-posts>.post>img:hover, .main-posts>.post>img:active {
+      position: relative;
+      animation-name: changeSize;
+      animation: 2s changeSize;
+      box-shadow: 0 10px 15px #919191;
+    }
+
+    @keyframes changeSize {
+      from {
+       transform: scale (1); 
+      }
+
+      to {
+        transform: scale(1.03);
+      }
+    }
+
+    .main-posts>.post>h2 {
+      font-size: 32px;
+    }
+
+    .main-posts>.post>p {
+      font-size: 20px;
+      justify-content: center;
+    }
+
+    .main-posts>.post>a, .main-posts>.post>a:visited {
+      display: block;
+      padding: 10px 0;
+      text-align: center;
+      text-decoration: none;
+      background-color: #004f00;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .main-posts>.post>a:hover, .main-posts>.post>a:active {
+      display: block;
+      padding: 10px 0;
+      text-align: center;
+      text-decoration: none;
+      background-color: #00b700;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    main>aside {
+      width: 28%;
+      float: left;
+      margin-top: 123px;
+    }
+
+    main>aside>h3 {
+      text-align: center;
+      font-size: 18px;
+    }
+
+    main>aside>table {
+      border-style: none;
+    }
+
+    main>aside>table>thead>tr{
+      background-color: #ffff6a;
+    }
+
+    main>aside>table>thead>tr>td {
+      text-align: center;
+    }
+
+    main>aside>table>tbody>tr {
+      background-color: #a8ff51;
+    }
+
+    main>aside>table>tbody>tr>td {
+      text-align: center;
+    }
+
+    .footer {
+      background-color: #dbb900;
+      float: left;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .footer>img {
+      float: left;
+      width: 5%;
+      height: auto;
+      padding: 10px 10px;
+    }
+
+    .footer>ul {                                        
+      float: left;
+      color: #fff;
+    }
+  
+    .footer>ul>li {
+      float: left;
+      list-style: none;
+      padding: 0px 3px;
+    }
+
+    .footer>ul>li>a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .footer>.icon {
+      display: flex;
+      flex-direction: row;
+      margin-left: 800px;
+    }
+    
+    .footer>.icon>h1 {
+      padding: 10px;
+      font-size: 20px;
+    }
+
+    .footer>.icon>h1>a {
+      color: #fff;
+    }
+
+    .footer>.icon>h1>a,.footer>.icon>h1>a:visited {
+      color: #fff;
+    } 
+
+    .footer>.icon>h1>a:hover, .footer>.icon>h1>a:active {
+    color: #a1a1a1;  
+    }
+</style>
+</head>
+
+<body>
+  <header>
+    <img src="assets/img/Sportsmaster-Merch-Fifa-World-Cup-Qatar-2022-Shirt.png" alt="">
+    <div class="vazio">
+      <h1>BRASIL</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#">Seleções</a>
+        <ul>
+          <li><a href="Brasil">Brasil</a></li>
+          <li><a href="./argentina.html">Argentina</a></li>
+          <li><a href="./uruguai.html">Uruguai</a></li>
+          <li><a href="./equador.html">Equador</a></li>
+        </ul>
+        </li>
+        <li><a href="./tabela.html">Tabela</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="main-posts">
+      <div class="post">
+        <img src="assets/img/camisa-selecao-onca.webp" alt="">
+       <h2>Veja a camisa que o Brasil vai usar na Copa do Mundo 2022</h2>
+        <p>Uniforme é inspirado nas onças-pintadas. Esporte Espetacular leva Richarlison ao Pantanal para ver modelo que vai vestir o Brasil no Catar: "A mais bonita do mundo"</p>
+        <a href="#">Ver mais</a>
+      </div>
+      <div class="post">
+        <img src="assets/img/neymarpsg.webp">
+        <h2>Radar da Seleção: Neymar tem melhor arrancada na sua décima temporada na Europa</h2>
+        <p>Craque do PSG tem sete gols e seis assistências em quatro jogos, melhor índice neste recorte. Vini Jr fez um em arrancada e deu passe para outro. Na Inglaterra, Gabriel Jesus segue como destaque</p>
+        <a href="#">Ver mais</a>
+      </div>
+      <div class="post">
+        <img src="assets/img/danialvespumas.webp">
+        <h2>Sob olhares de comissão da Seleção, Pumas, de Daniel Alves, sofre goleada no México</h2>
+        <p>Com auxiliar César Sampaio e fisiologista Guilherme Passos acompanhando in loco pela seleção brasileira, equipe de lateral-direito sofre cinco gols do Santos Laguna</p>
+        <a href="#">Ver mais</a>
+      </div>
+    </section>
+
+  <aside>
+    <h3>Jogadores do Brasil</h3>
+    <table>
+      <thead>
+        <tr>
+          <td>POS</td>
+          <td>JOGADOR</td>
+          <td>IDADE</td>
+          <td>TIME</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>GOL</td>
+          <td>Alisson</td>
+          <td>29</td>
+          <td>Liverpool</td>
+        </tr>
+        <tr>
+          <td>GOL</td>
+          <td>Ederson</td>
+          <td>29</td>
+          <td>Manchester City</td>
+        </tr>
+        <tr>
+          <td>GOL</td>
+          <td>Werverton</td>
+          <td>34</td>
+          <td>Palmeiras</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Alex Sandro</td>
+          <td>31</td>
+          <td>Juventus</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Alex Telles</td>
+          <td>29</td>
+          <td>Sevilla</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Dani Alves</td>
+          <td>39</td>
+          <td>Pumas</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Gabriel Magalhães</td>
+          <td>24</td>
+          <td>Arsenal</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Guilherme Arana</td>
+          <td>25</td>
+          <td>Atlético-MG</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Léo Ortiz</td>
+          <td>26</td>
+          <td>Red Bull Bragantino</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Marquinhos</td>
+          <td>28</td>
+          <td>PSG</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Thiago Silva</td>
+          <td>37</td>
+          <td>Chelsea</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Éder Militão/td>
+          <td>24</td>
+          <td>Real Madrid</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Bruno Guimarães</td>
+          <td>24</td>
+          <td>Newcastle</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Casemiro</td>
+          <td>30</td>
+          <td>Manchester United</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Danilo</td>
+          <td>21</td>
+          <td>Palmeiras</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Fabinho</td>
+          <td>28</td>
+          <td>Liverpool</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Fred</td>
+          <td>29</td>
+          <td>Manchester United</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Lucas Paquetá</td>
+          <td>25</td>
+          <td>Lyon</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Philippe Coutinho</td>
+          <td>30</td>
+          <td>Aston Villa</td>
+        </tr>
+        <tr>
+          <td>ATA</td>
+          <td>Gabriel Jesus</td>
+          <td>25</td>
+          <td>Arsenal</td>
+        </tr>
+        <tr>
+          <td>ATA</td>
+          <td>Gabriel Martinelli</td>
+          <td>21</td>
+          <td>Arsenal</td>
+        </tr>
+        <tr>
+          <td>ATA</td>
+          <td>Matheus Cunha</td>
+          <td>23</td>
+          <td>Atlético de Madrid</td>
+        </tr>
+        <tr>
+          <td>ATA</td>
+          <td>Neymar</td>
+          <td>30</td>
+          <td>PSG</td>
+        </tr>
+        <tr>
+          <td>ATA</td>
+          <td>Raphinha</td>
+          <td>25</td>
+          <td>Barcelona</td>
+        </tr>
+        <tr>
+          <td>ATA</td>
+          <td>Richarlison</td>
+          <td>25</td>
+          <td>Tottenham</td>
+        </tr>
+        <tr>
+          <td>ATA</td>
+          <td>Rodrygo</td>
+          <td>21</td>
+          <td>Real Madrid</td>
+        </tr>
+        <tr>
+          <td>ATA</td>
+          <td>Vinícius Júnior</td>
+          <td>22</td>
+          <td>Real Madrid</td>
+        </tr>
+      </tbody>
+    </table>
+  </aside>
+</main>
+
+  <div class="footer">
+  <img src="assets/img/Sportsmaster-Merch-Fifa-World-Cup-Qatar-2022-Shirt.png" alt="">
+    <ul>
+      <li><a href="#">seleções</a></li>
+      <li>|</li>
+      <li><a href="#">tabela</a></li>
+      <li>|</li>
+      <li><a href="./faleconosco.html">fale conosco</a></li>
+    </ul>
+    <span class="icon"> 
+  <h1><a href="#"><i class="fa-brands fa-whatsapp"></i></a></h1>
+  <h1><a href="#"><i class="fa-brands fa-twitter"></i></a></h1>
+  <h1><a href="#"><i class="fa-brands fa-facebook"></i></a></h1>
+  <h1><a href="#"><i class="fa-brands fa-instagram"></i></a></h1>
+</span>
+</div>
+</body>
+
+</html>

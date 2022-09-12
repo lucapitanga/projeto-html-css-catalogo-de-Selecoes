@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Equador</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+    * {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+  body {
+    margin: 0;
+    background-color: #fff;
+  }
+    header {
+      background-color: #001741;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      position: fixed;
+   }
+
+    
+    header>img {
+      width: 7%;
+      height: 100px;
+      padding: 10px 20px;
+      float: left;
+      }
+
+    header>.vazio{
+      width: 760px;
+      height: auto;
+    }
+
+    header>.vazio>h1{
+      text-align: center;
+      margin-top: 30px;
+      color: #fff;
+    }
+
+    header>nav {
+      display: flex;
+    }
+    
+    header>nav>ul{
+      display: flex;
+      margin-top: 40px;
+    }
+    
+    header>nav>ul>li {
+      float: left;
+      list-style: none;
+      padding: 10px 20px;
+      justify-content: center;
+      position: relative;
+    }
+
+    header>nav>ul>li>a,header>nav>ul>li>a:visited {
+      text-decoration: none;
+      color: #fff;
+      position: relative;
+      box-sizing: border-box;]
+      font-weight: 600;
+    }
+
+    header>nav>ul>li>a::before {
+      content:"";
+      width: 0;
+      height: 1px;
+      background-color: #fff;
+      position: absolute;
+    }
+
+    header>nav>ul>li>a:hover::before, header>nav>ul>li>a:active::before {
+      transition: 0.3s ease-out all;
+      width: 100%;
+    }
+
+    header>nav>ul>li>ul {
+      padding-left: 0;
+      text-align: center;
+      display: none;
+      position: absolute;
+      width: 80px;
+    }
+
+    header>nav>ul>li:hover>ul {
+      display: block;
+    }
+
+    header>nav>ul>li>ul>li {
+      list-style: none;
+      position: relative;
+    }
+
+header>nav>ul>li>ul>li>a,header>nav>ul>li>ul>li>a:visited {
+      padding: 10px 10px;
+      float: left;  
+      text-decoration: none;
+      color: #fff;
+      width: 80px;
+      background: #001741;
+      font-size: 14px;
+    }
+
+    .main-posts {
+      width: 70%;
+      float: left;
+      margin-top: 160px;
+    }
+
+    .main-posts>.post {
+      float: left;
+      width: 100%;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+    .main-posts>.post>img {
+      width: 100%;
+    }
+
+    .main-posts>.post>img:hover, .main-posts>.post>img:active {
+      position: relative;
+      animation-name: changeSize;
+      animation: 2s changeSize;
+      box-shadow: 0 10px 15px #919191;
+    }
+
+    @keyframes changeSize {
+      from {
+       transform: scale (1); 
+      }
+
+      to {
+        transform: scale(1.03);
+      }
+    }
+
+    .main-posts>.post>h2 {
+      font-size: 32px;
+    }
+
+    .main-posts>.post>p {
+      font-size: 20px;
+      justify-content: center;
+    }
+
+    .main-posts>.post>a, .main-posts>.post>a:visited {
+      display: block;
+      padding: 10px 0;
+      text-align: center;
+      text-decoration: none;
+      background-color: #dbb900;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .main-posts>.post>a:hover, .main-posts>.post>a:active {
+      display: block;
+      padding: 10px 0;
+      text-align: center;
+      text-decoration: none;
+      background-color: #ffff00;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    main>aside {
+      width: 28%;
+      float: left;
+      margin-top: 123px;
+    }
+
+    main>aside>h3 {
+      text-align: center;
+      font-size: 18px;
+    }
+
+    main>aside>table {
+      border-style: none;
+    }
+
+    main>aside>table>thead>tr{
+      background-color:#ffff6a ;
+    }
+
+    main>aside>table>thead>tr>td {
+      text-align: center;
+    }
+
+    main>aside>table>tbody>tr {
+      background-color: #ffb3b3;
+    }
+
+    main>aside>table>tbody>tr>td {
+      text-align: center;
+    }
+
+    .footer {
+      background-color:#001741 ;
+      float: left;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .footer>img {
+      float: left;
+      width: 5%;
+      height: auto;
+      padding: 10px 10px;
+    }
+
+    .footer>ul {                                        
+      float: left;
+      color: #fff;
+    }
+  
+    .footer>ul>li {
+      float: left;
+      list-style: none;
+      padding: 0px 3px;
+    }
+
+    .footer>ul>li>a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .footer>.icon {
+      display: flex;
+      flex-direction: row;
+      margin-left: 800px;
+    }
+    
+    .footer>.icon>h1 {
+      padding: 10px;
+      font-size: 20px;
+    }
+
+    .footer>.icon>h1>a {
+      color: #fff;
+    }
+
+    .footer>.icon>h1>a,.footer>.icon>h1>a:visited {
+      color: #fff;
+    } 
+
+    .footer>.icon>h1>a:hover, .footer>.icon>h1>a:active {
+    color: #a1a1a1;  
+    }
+</style>
+</head>
+
+<body>
+  <header>
+    <img src="assets/img/Sportsmaster-Merch-Fifa-World-Cup-Qatar-2022-Shirt.png" alt="">
+    <div class="vazio">
+      <h1>EQUADOR</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#">Seleções</a>
+        <ul>
+          <li><a href="./brasil.html">Brasil</a></li>
+          <li><a href="./argentina.html">Argentina</a></li>
+          <li><a href="./uruguai.html">Uruguai</a></li>
+          <li><a href="./equador.html">Equador</a></li>
+        </ul>
+        </li>
+        <li><a href="./tabela.html">Tabela</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="main-posts">
+      <div class="post">
+        <img src="assets/img/antecipacao1356340102.webp" alt="">
+       <h2>Fifa vai antecipar em um dia data de início da Copa do Mundo</h2>
+        <p>Entidade deve colocar Catar x Equador no domingo, dia 20 de novembro, para marcar início do Mundial</p>
+        <a href="#">Ver mais</a>
+      </div>
+      <div class="post">
+        <img src="assets/img/byron1353713344.webp">
+        <h2>Depois de decisão da Fifa, Byron Castillo é anunciado pelo León, do México</h2>
+        <p>Jogador equatoriano reforça elenco de Las Fieras depois de três temporadas no Barcelona de Guayaquil</p>
+        <a href="#">Ver mais</a>
+      </div>
+      <div class="post">
+        <img src="assets/img/polemicas-1388474757.webp">
+        <h2>Caso Byron Castillo: Fifa decide encerrar o processo contra a federação do Equador</h2>
+        <p>Chile tentava assumir a vaga na Copa do Mundo de 2022 por causa da polêmica em relação à nacionalidade do lateral-direito</p>
+        <a href="#">Ver mais</a>
+      </div>
+    </section>
+
+  <aside>
+    <h3>Jogadores do Equador</h3>
+    <table>
+      <thead>
+        <tr>
+          <td>POS</td>
+          <td>JOGADOR</td>
+          <td>IDADE</td>
+          <td>TIME</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>GOL</td>
+          <td>Alexander Domínguez</td>
+          <td>35</td>
+          <td>LDU</td>
+        </tr>
+        <tr>
+          <td>GOL</td>
+          <td>Hernán Galíndez</td>
+          <td>35</td>
+          <td>Aucas</td>
+        </tr>
+        <tr>
+          <td>GOL</td>
+          <td>Jorge Pinos</td>
+          <td>32</td>
+          <td>9 de Octubre</td>
+        </tr>
+        <tr>
+          <td>GOL</td>
+          <td>Wellington Ramirez</td>
+          <td>21</td>
+          <td>Independiente Del Valle</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Byron Castillo</td>
+          <td>23</td>
+          <td>Barcelona de Guayaquil</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Diego Palacios</td>
+          <td>23</td>
+          <td>Los Angeles FC</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Fernando León</td>
+          <td>29</td>
+          <td>Atlético San Luis</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Jackson Porozo</td>
+          <td>22</td>
+          <td>Troyes</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Pervis Estupinan</td>
+          <td>24</td>
+          <td>Brighton</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Piero Hincapié</td>
+          <td>20</td>
+          <td>Bayer Leverkusen</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Robert Arboleda</td>
+          <td>30</td>
+          <td>São Paulo</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Xavier Arreaga/td>
+          <td>27</td>
+          <td>Seattle Sounders</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Alan Franco</td>
+          <td>24</td>
+          <td>Charlotte</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Alexander Alvarado</td>
+          <td>23</td>
+          <td>LDU</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Angelo Preciado</td>
+          <td>24</td>
+          <td>Genk</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Carlos Gruezo</td>
+          <td>27</td>
+          <td>Augsburg</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Danny Cabezas</td>
+          <td>29</td>
+          <td>Independiente Del Valle</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Dixon Arroyo</td>
+          <td>30</td>
+          <td>Emelec</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Djorkaeff Reascos</td>
+          <td>23</td>
+          <td>Newell's Old Boys</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Felix Torres</td>
+          <td>25</td>
+          <td>Santos Laguna</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Gonzalo Plata</td>
+          <td>21</td>
+          <td>Real Valladolid</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Jeremy Sarmiento</td>
+          <td>20</td>
+          <td>Brighton sub-21</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Jhegson Méndez</td>
+          <td>25</td>
+          <td>Los Angeles FC</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Joao Rojas</td>
+          <td>25</td>
+          <td>Emelec</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Jordy Caicedo</td>
+          <td>24</td>
+          <td>Tigres UANL</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Jose Cifuentes</td>
+          <td>23</td>
+          <td>Los Angeles FC</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Michael Carcelén</td>
+          <td>25</td>
+          <td>Barcelona de Guayaquil</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Moisés Caicedo</td>
+          <td>25</td>
+          <td>Brighton</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Renato Ibarra</td>
+          <td>31</td>
+          <td>Tijuana</td>
+        </tr>
+        <tr>
+          <td>ATA</td>
+          <td>Enner Valencia</td>
+          <td>32</td>
+          <td>Fenerbahçe</td>
+        </tr>
+        <tr>
+          <td>ATA</td>
+          <td>Leonardo Campana</td>
+          <td>22</td>
+          <td>Inter Miami</td>
+        </tr>
+        <tr>
+          <td>ATA</td>
+          <td>Michael Estrada</td>
+          <td>26</td>
+          <td>Cruz Azul</td>
+        </tr>
+        <tr>
+          <td>ATA</td>
+          <td>Romario Ibarra</td>
+          <td>27</td>
+          <td>Pachuca</td>
+        </tr>
+        <tr>
+          <td>ATA</td>
+          <td>Ángel Mena</td>
+          <td>34</td>
+          <td>León</td>
+        </tr>
+      </tbody>
+    </table>
+  </aside>
+</main>
+
+  <div class="footer">
+  <img src="assets/img/Sportsmaster-Merch-Fifa-World-Cup-Qatar-2022-Shirt.png" alt="">
+    <ul>
+      <li><a href="#">seleções</a></li>
+      <li>|</li>
+      <li><a href="#">tabela</a></li>
+      <li>|</li>
+      <li><a href="./faleconosco.html">fale conosco</a></li>
+    </ul>
+  <span class="icon"> 
+  <h1><a href="#"><i class="fa-brands fa-whatsapp"></i></a></h1>
+  <h1><a href="#"><i class="fa-brands fa-twitter"></i></a></h1>
+  <h1><a href="#"><i class="fa-brands fa-facebook"></i></a></h1>
+  <h1><a href="#"><i class="fa-brands fa-instagram"></i></a></h1>
+</span>
+</div>
+</body>
+
+</html>

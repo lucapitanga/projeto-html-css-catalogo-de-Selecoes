@@ -1,0 +1,319 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+    * {
+      font-family: 'Poppins', sans-serif;
+    }
+
+
+
+  
+  body {
+    margin: 0;
+  }
+
+
+    header {
+      background-color: #780202;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      position: static;
+   }
+
+    
+    header>img {
+      width: 7%;
+      height: 100px;
+      padding: 10px 20px;
+      float: left;
+      }
+
+    header>.vazio{
+      width: 760px;
+      height: auto;
+    }
+
+    header>.vazio>h1{
+      text-align: center;
+      margin-top: 30px;
+      color: #fff;
+    }
+
+    header>nav {
+      display: flex;
+    }
+    
+    header>nav>ul{
+      display: flex;
+      margin-top: 40px;
+    }
+    
+    header>nav>ul>li {
+      float: left;
+      list-style: none;
+      padding: 10px 20px;
+      justify-content: center;
+      position: relative;
+    }
+
+    header>nav>ul>li>a,header>nav>ul>li>a:visited {
+      text-decoration: none;
+      color: #fff;
+      position: relative;
+      box-sizing: border-box;]
+      font-weight: 600;
+    }
+
+    header>nav>ul>li>a::before {
+      content:"";
+      width: 0;
+      height: 1px;
+      background-color: #fff;
+      position: absolute;
+    }
+
+    header>nav>ul>li>a:hover::before, header>nav>ul>li>a:active::before {
+      transition: 0.3s ease-out all;
+      width: 100%;
+    }
+
+    header>nav>ul>li>ul {
+      padding-left: 0;
+      text-align: center;
+      display: none;
+      position: absolute;
+      width: 80px;
+    }
+
+    header>nav>ul>li:hover>ul {
+      display: block;
+    }
+
+    header>nav>ul>li>ul>li {
+      list-style: none;
+      position: relative;
+    }
+
+header>nav>ul>li>ul>li>a,header>nav>ul>li>ul>li>a:visited {
+      padding: 10px 10px;
+      float: left;  
+      text-decoration: none;
+      color: #fff;
+      width: 80px;
+      background: #780202;
+      font-size: 14px;
+    }
+
+    
+    @keyframes changeimg {
+      0% {
+        background-image: url(./assets/img/FIFA_WinnersTrophy_Doha-1-1024x677.jpg);
+      }
+      20% {
+        background-image: url(./assets/img/brasil2865-MLB41380348359_042020-O.webp);
+      }
+      40% {
+        background-image: url(./assets/img/argentina.svg.webp);
+      }
+      80% {
+        background-image: url(./assets/img/uruguai.webp);
+      }
+      100% {
+        background-image: url(./assets/img/bandeira-do-equador-2000px.png.crdownload);
+      }
+    }
+
+    .main-posts {
+      width: 70%;
+      float: left;
+    }
+
+    .main-posts>.post {
+      float: left;
+      width: 100%;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    .main-posts>.post>img {
+      width: 100%;
+    }
+
+    .main-posts>.post>img:hover,.main-posts>.post>img:active {
+     position: relative;
+      animation-name: changeSize;
+      animation: 2s changeSize;
+      box-shadow: 0 10px 15px #919191;
+    } 
+
+    .main-posts>.post>h2 {
+      font-size: 32px;
+    }
+
+    .main-posts>.post>p {
+      font-size: 20px;
+      justify-content: center;
+    }
+
+    .main-posts>.post>a, .main-posts>.post>a:visited {
+      display: block;
+      padding: 10px 0;
+      text-align: center;
+      text-decoration: none;
+      background-color: #780202;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .main-posts>.post>a:hover, .main-posts>.post>a:active {
+      display: block;
+      padding: 10px 0;
+      text-align: center;
+      text-decoration: none;
+      background-color: #ff0c0c;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    @keyframes changeSize {
+      from {
+       transform: scale (1); 
+      }
+
+      to {
+        transform: scale(1.03);
+      }
+    }
+    
+    .side-posts {
+      width: 30%;
+      float: left;
+    }
+    
+    .side-posts>ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .side-posts>ul>li {
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+      padding: 10px;
+    }
+
+    .side-posts>ul>li>span:first-child {
+      display: flex;
+     justify-content: center;
+    }
+
+    .side-posts>ul>li>span:last-child {
+      margin: 0px;
+    }
+
+    .side-posts>ul>li>span>img {
+         height: 200px;
+    }
+
+    .side-posts>ul>li>span>img:hover, .side-posts>ul>li>span>img:active {
+      position: relative;
+      animation-name: changeSize;
+      animation: 2s changeSize;
+      box-shadow: 0 10px 15px #919191;
+    }
+
+    .side-posts>ul>li>span>h3 {
+      font-size: 20px;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .side-posts>ul>li>span>p {
+      font-size: 14px;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .side-posts>ul>li>span>a, .side-posts>ul>li>span>a:visited {
+      display: block;
+      padding: 5px 0;
+      text-align: center;
+      text-decoration: none;
+      background-color: #780202;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .side-posts>ul>li>span>a:hover, .side-posts>ul>li>span>a:active {
+      display: block;
+      padding: 5px 0;
+      text-align: center;
+      text-decoration: none;
+      background-color: #ff0c0c;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .footer {
+      background-color: #780202;
+      float: left;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .footer>img {
+      float: left;
+      width: 5%;
+      height: auto;
+      padding: 10px 10px;
+    }
+
+    .footer>ul {
+      float: left;
+      color: #fff;
+    }
+  
+    .footer>ul>li {
+      float: left;
+      list-style: none;
+      padding: 0px 3px;
+    }
+
+    .footer>ul>button>a {
+      text-decoration: none;
+      color: #780202;
+    }
+
+    .footer>ul>li>a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .footer>.icon {
+      display: flex;
+      flex-direction: row;
+      margin-left: 800px;
+    }
+    
+    .footer>.icon>h1 {
+      padding: 10px;
+      font-size: 20px;
+    }
+
+    .footer>.icon>h1>a,.footer>.icon>h1>a:visited {
+      color: #fff;
+    } 
+
+    .footer>.icon>h1>a:hover, .footer>.icon>h1>a:active {
+    color: #a1a1a1;  
+    }
+
+ @import url("all.min.css")
+ @import url("medias.css")
+ @import url("header.css")
+ @import url("footer.css")

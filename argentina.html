@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Argentina</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <style> 
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+    
+    * {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+    margin: 0;
+    background-color: #fff;
+  }
+    header {
+      background-color: #000080;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      position: fixed;
+   }
+
+    
+    header>img {
+      width: 7%;
+      height: 100px;
+      padding: 10px 20px;
+      float: left;
+      }
+
+    header>.vazio{
+      width: 760px;
+      height: auto;
+    }
+
+    header>.vazio>h1{
+      text-align: center;
+      margin-top: 30px;
+      color: #fff;
+    }
+
+    header>nav {
+      display: flex;
+    }
+    
+    header>nav>ul{
+      display: flex;
+      margin-top: 40px;
+    }
+    
+    header>nav>ul>li {
+      float: left;
+      list-style: none;
+      padding: 10px 20px;
+      justify-content: center;
+      position: relative;
+    }
+
+    header>nav>ul>li>a,header>nav>ul>li>a:visited {
+      text-decoration: none;
+      color: #fff;
+      position: relative;
+      box-sizing: border-box;]
+      font-weight: 600;
+    }
+
+    header>nav>ul>li>a::before {
+      content:"";
+      width: 0;
+      height: 1px;
+      background-color: #fff;
+      position: absolute;
+    }
+
+    header>nav>ul>li>a:hover::before, header>nav>ul>li>a:active::before {
+      transition: 0.3s ease-out all;
+      width: 100%;
+    }
+
+    header>nav>ul>li>ul {
+      padding-left: 0;
+      text-align: center;
+      display: none;
+      position: absolute;
+      width: 80px;
+    }
+
+    header>nav>ul>li:hover>ul {
+      display: block;
+    }
+
+    header>nav>ul>li>ul>li {
+      list-style: none;
+      position: relative;
+    }
+
+header>nav>ul>li>ul>li>a,header>nav>ul>li>ul>li>a:visited {
+      padding: 10px 10px;
+      float: left;  
+      text-decoration: none;
+      color: #fff;
+      width: 80px;
+      background: #000080;
+      font-size: 14px;
+    }
+
+    .main-posts {
+      width: 70%;
+      float: left;
+      margin-top: 160px;
+    }
+
+    .main-posts>.post {
+      float: left;
+      width: 100%;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+    .main-posts>.post>img {
+      width: 100%;
+    }
+
+    .main-posts>.post>img:hover, .main-posts>.post>img:active {
+      position: relative;
+      animation-name: changeSize;
+      animation: 2s changeSize;
+      box-shadow: 0 10px 15px #919191;
+    } 
+
+    @keyframes changeSize {
+      from {
+       transform: scale (1); 
+      }
+
+      to {
+        transform: scale(1.03);
+      }
+    }
+
+    .main-posts>.post>h2 {
+      font-size: 32px;
+    }
+
+    .main-posts>.post>p {
+      font-size: 20px;
+      justify-content: center;
+    }
+
+    .main-posts>.post>a, .main-posts>.post>a:visited {
+      display: block;
+      padding: 10px 0;
+      text-align: center;
+      text-decoration: none;
+      background-color: #6969ff;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .main-posts>.post>a:hover, .main-posts>.post>a:active {
+      display: block;
+      padding: 10px 0;
+      text-align: center;
+      text-decoration: none;
+      background-color: #9494ff;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    main>aside {
+      width: 28%;
+      float: left;
+      margin-top: 123px;
+    }
+
+    main>aside>h3 {
+      text-align: center;
+      font-size: 18px;
+    }
+
+    main>aside>table {
+      border-style: none;
+    }
+
+    main>aside>table>thead>tr{
+      background-color: #acacff;
+    }
+
+    main>aside>table>thead>tr>td {
+      text-align: center;
+    }
+
+    main>aside>table>tbody>tr {
+      background-color: #e9e9ff;
+    }
+
+    main>aside>table>tbody>tr>td {
+      text-align: center;
+    }
+
+    .footer {
+      background-color: #000080;
+      float: left;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .footer>img {
+      float: left;
+      width: 5%;
+      height: auto;
+      padding: 10px 10px;
+    }
+
+    .footer>ul {                                        
+      float: left;
+      color: #fff;
+    }
+  
+    .footer>ul>li {
+      float: left;
+      list-style: none;
+      padding: 0px 3px;
+    }
+
+    .footer>ul>li>a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .footer>.icon {
+      display: flex;
+      flex-direction: row;
+      margin-left: 800px;
+    }
+    
+    .footer>.icon>h1 {
+      padding: 10px;
+      font-size: 20px;
+    }
+
+    .footer>.icon>h1>a {
+      color: #fff;
+    } 
+
+    .footer>.icon>h1>a,.footer>.icon>h1>a:visited {
+      color: #fff;
+    } 
+
+    .footer>.icon>h1>a:hover, .footer>.icon>h1>a:active {
+    color: #a1a1a1;  
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="assets/img/Sportsmaster-Merch-Fifa-World-Cup-Qatar-2022-Shirt.png" alt="">
+    <div class="vazio">
+      <h1>ARGENTINA</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#">Seleções</a>
+        <ul>
+          <li><a href="./brasil.html">Brasil</a></li>
+          <li><a href="Argentina">Argentina</a></li>
+          <li><a href="./uruguai.html">Uruguai</a></li>
+          <li><a href="./equador.html">Equador</a></li>
+        </ul>
+        </li>
+        <li><a href="./tabela.html">Tabela</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="main-posts">
+      <div class="post">
+        <img src="assets/img/argentinaingresso1d7cf6358d9c5e6ceaf5a34bd7951d.webp" alt="">
+       <h2>Ingressos para jogos da Argentina na Copa são os mais procurados</h2>
+        <p>Segundo a organização do torneio, Argentina e México é a partida com mais busca por entradas</p>
+        <a href="#">Ver mais</a>
+      </div>
+      <div class="post">
+        <img src="assets/img/messi3ee0e890df8868bce54d4e2326d3w.webp">
+        <h2>Copa do Mundo 2022: Lionel Messi e os recordes que pode atingir com a Argentina</h2>
+        <p>Veja números e participações do craque argentino em mundiais; camisa 10 pode aumentar seus feitos na carreira com a seleção albiceleste no Catar</p>
+        <a href="#">Ver mais</a>
+      </div>
+      <div class="post">
+        <img src="assets/img/conmebol32fv8rl.webp">
+        <h2>Conmebol lança candidatura de Argentina, Chile, Paraguai e Uruguai para Copa de 2030</h2>
+        <p>Sul-americanos apostam em comemoração do aniversário de 100 anos do primeiro Mundial para vencer disputa com Espanha e Portugal e outros postulantes</p>
+        <a href="#">Ver mais</a>
+      </div>
+    </section>
+    
+    <aside>
+    <h3>Jogadores da Argentina</h3>
+    <table>
+      <thead>
+        <tr>
+          <td>POS</td>
+          <td>JOGADOR</td>
+          <td>IDADE</td>
+          <td>TIME</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>GOL</td>
+          <td>Franco Armani</td>
+          <td>35</td>
+          <td>River Plate</td>
+        </tr>
+        <tr>
+          <td>GOL</td>
+          <td>Gerónimo Rulli</td>
+          <td>35</td>
+          <td>Villarreal</td>
+        </tr>
+        <tr>
+          <td>GOL</td>
+          <td>Juan Musso</td>
+          <td>28</td>
+          <td>Atalanta</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Cristian Romero</td>
+          <td>24</td>
+          <td>Tottenham</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Germán Pezzella</td>
+          <td>31</td>
+          <td>Real Betis</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Gonzalo Montiel</td>
+          <td>25</td>
+          <td>Sevilla</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Juan Foyth</td>
+          <td>24</td>
+          <td>Villarreal</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Lisandro Martínez</td>
+          <td>25</td>
+          <td>Manchester United</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Marcos Acuña</td>
+          <td>30</td>
+          <td>Sevilla</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Marcos Senesi</td>
+          <td>25</td>
+          <td>Bournemouth</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Nahuel Molina</td>
+          <td>24</td>
+          <td>Atlético de Madrid</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Nehuén Pérez</td>
+          <td>22</td>
+          <td>Udinese</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Nicolás Otamendi</td>
+          <td>34</td>
+          <td>Benfica</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>Nicolás Tagliafico</td>
+          <td>30</td>
+          <td>Lyon</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Alejandro Gómez</td>
+          <td>34</td>
+          <td>Sevilla</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Alexis Mac Allister</td>
+          <td>23</td>
+          <td>Brighton</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Exequiel Palacios</td>
+          <td>23</td>
+          <td>Bayer Leverkusen</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Giovani Lo Celso</td>
+          <td>26</td>
+          <td>Villarreal</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Guido Rodriguez</td>
+          <td>28</td>
+          <td>Real Betis</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Joaquín Correa</td>
+          <td>28</td>
+          <td>Inter de Milão</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Rodrigo De Paul</td>
+          <td>28</td>
+          <td>Atlético de Madrid</td>
+        </tr>
+        <tr>
+          <td>MEI</td>
+          <td>Ángel Di Maria</td>
+          <td>34</td>
+          <td>Juventus</td>
+        </tr>
+        <tr>
+          <td>ATA</td>
+          <td>Julián Álvarez</td>
+          <td>22</td>
+          <td>Manchester City</td>
+        </tr>
+        <tr>
+          <td>ATA</td>
+          <td>Lautaro Martínez</td>
+          <td>25</td>
+          <td>Inter de Milão</td>
+        </tr>
+        <tr>
+          <td>ATA</td>
+          <td>Richarlison</td>
+          <td>25</td>
+          <td>Tottenham</td>
+        </tr>
+        <tr>
+          <td>ATA</td>
+          <td>Lionel Messi</td>
+          <td>35</td>
+          <td>PSG</td>
+        </tr>
+        <tr>
+          <td>ATA</td>
+          <td>Nicolás González</td>
+          <td>24</td>
+          <td>Fiorentina</td>
+        </tr>
+        <tr>
+          <td>ATA</td>
+          <td>Paulo Dybala</td>
+          <td>28</td>
+          <td>Roma</td>
+        </tr>
+      </tbody>
+    </table>
+  </aside>
+  </main>
+
+  <div class="footer">
+  <img src="assets/img/Sportsmaster-Merch-Fifa-World-Cup-Qatar-2022-Shirt.png" alt="">
+    <ul>
+      <li><a href="#">seleções</a></li>
+      <li>|</li>
+      <li><a href="#">tabela</a></li>
+      <li>|</li>
+      <li><a href="./faleconosco.html">fale conosco</a></li>
+    </ul>
+  <span class="icon"> 
+  <h1><a href="#"><i class="fa-brands fa-whatsapp"></i></a></h1>
+  <h1><a href="#"><i class="fa-brands fa-twitter"></i></a></h1>
+  <h1><a href="#"><i class="fa-brands fa-facebook"></i></a></h1>
+  <h1><a href="#"><i class="fa-brands fa-instagram"></i></a></h1>
+</span>
+</div>
+</body>
+
+</html>

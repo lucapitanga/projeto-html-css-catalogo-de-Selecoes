@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Copa do Mundo 2022 - Tabela</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+    * {
+      font-family: 'Poppins', sans-serif;
+    }
+
+  body {
+    margin: 0;
+    background-color: #fff;
+   }
+
+    header {
+      background-color: #780202;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+   }
+
+    
+    header>img {
+      width: 7%;
+      height: 100px;
+      padding: 10px 20px;
+      float: left;
+      }
+
+    header>.vazio{
+      width: 760px;
+      height: auto;
+    }
+
+    header>.vazio>h1{
+      text-align: center;
+      margin-top: 30px;
+      color: #fff;
+    }
+
+    header>nav {
+      display: flex;
+    }
+    
+    header>nav>ul{
+      display: flex;
+      margin-top: 40px;
+    }
+    
+    header>nav>ul>li {
+      float: left;
+      list-style: none;
+      padding: 10px 20px;
+      justify-content: center;
+    }
+
+    header>nav>ul>li>a,header>nav>ul>li>a:visited {
+      padding: 0px 0px;
+      text-decoration: none;
+      color: #fff;
+      position: relative;
+      box-sizing: border-box;
+      font-weight: 400;
+    }
+
+    header>nav>ul>li>a::before {
+      content:"";
+      width: 0;
+      height: 1px;
+      background-color: #fff;
+      position: absolute;
+    }
+
+    header>nav>ul>li>a:hover::before {
+      transition: 0.3s ease-out all;
+      width: 100%;
+    }
+
+    header>nav>ul>li>ul {
+      padding-left: 0;
+      text-align: center;
+      display: none;
+      position: absolute;
+      width: 80px;
+    }
+
+    header>nav>ul>li:hover>ul {
+      display: block;
+    }
+
+    header>nav>ul>li>ul>li {
+      list-style: none;
+      position: relative;
+    }
+
+header>nav>ul>li>ul>li>a,header>nav>ul>li>ul>li>a:visited {
+      padding: 10px 10px;
+      float: left;  
+      text-decoration: none;
+      color: #fff;
+      width: 80px;
+      background: #780202;
+      font-size: 14px;
+    }
+
+    main {
+      width: 100%;
+      height: auto;
+    }
+
+    main>h1 {
+      text-align: center;
+    }
+
+    main>div {
+      margin-left: 200px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    main>div>table {
+      width: 500px;
+      height: 250px;
+      border-style: none;
+    }
+
+    main>div>table>thead {
+      font-size: 12px;
+      background-color: #e6e6e6;
+    }
+
+    main>div>table>tbody {
+      font-size: 16px;
+      background-color: #ffb3b3;
+    }
+
+    main>div>table>thead>tr>td {
+      text-align: center;
+      width: 43px;
+      height: 22px;
+    }
+
+    main>div>table>tbody>tr>td {
+      text-align: center;
+      width: 43px;
+      height: 22px;
+      font-weight: 600;
+    }
+
+    main>div>table>thead>tr>td:first-child {
+      padding: 5px 20px;
+    }
+
+    .footer {
+      background-color: #780202;
+      float: left;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .footer>img {
+      float: left;
+      width: 5%;
+      height: auto;
+      padding: 10px 10px;
+    }
+
+    .footer>ul {                                        
+      float: left;
+      color: #fff;
+    }
+  
+    .footer>ul>li {
+      float: left;
+      list-style: none;
+      padding: 0px 3px;
+    }
+
+    .footer>ul>li>a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .footer>.icon {
+      display: flex;
+      flex-direction: row;
+      margin-left: 800px;
+    }
+    
+    .footer>.icon>h1 {
+      padding: 10px;
+      font-size: 20px;
+    }
+
+    .footer>.icon>h1>a {
+      color: #fff;
+    }
+
+    .footer>.icon>h1>a,.footer>.icon>h1>a:visited {
+      color: #fff;
+    } 
+
+    .footer>.icon>h1>a:hover, .footer>.icon>h1>a:active {
+    color: #a1a1a1;  
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="assets/img/Sportsmaster-Merch-Fifa-World-Cup-Qatar-2022-Shirt.png" alt="">
+    <div class="vazio">
+      <h1>COPA DO MUNDO</h1>
+    </div>
+    <nav>
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="#">Seleções</a>
+      <ul>
+        <li><a href="./brasil.html">Brasil</a></li>
+        <li><a href="./argentina.html">Argentina</a></li>
+        <li><a href="./uruguai.html">Uruguai</a></li>
+        <li><a href="./equador.html">Equador</a></li>
+      </ul>
+      </li>
+      <li><a href="./tabela.html">Tabela</a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Fase de Grupos</h1>
+    <div>
+      <h2>GRUPO A</h2>
+      <table>
+        <thead>
+          <tr>
+            <td>CLASSIFICAÇÃO</td>
+            <td>P</td>
+            <td>J</td>
+            <td>V</td>
+            <td>E</td>
+            <td>D</td>
+            <td>GP</td>
+            <td>GC</td>
+            <td>SG</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Catar</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Equador</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Holanda</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Senegal</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </table> 
+    </div>
+    <div>
+      <h2>GRUPO B</h2>
+      <table>
+        <thead>
+          <tr>
+            <td>CLASSIFICAÇÃO</td>
+            <td>P</td>
+            <td>J</td>
+            <td>V</td>
+            <td>E</td>
+            <td>D</td>
+            <td>GP</td>
+            <td>GC</td>
+            <td>SG</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Estados Unidos</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Inglaterra</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Irã</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>País de Gales</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </thead>
+      </table>
+    </div>
+    <div>
+      <h2>GRUPO C</h2>
+      <table>
+        <thead>
+          <tr>
+            <td>CLASSIFICAÇÃO</td>
+            <td>P</td>
+            <td>J</td>
+            <td>V</td>
+            <td>E</td>
+            <td>D</td>
+            <td>GP</td>
+            <td>GC</td>
+            <td>SG</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Argentina</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Arábia Saudita</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>México</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Polônia</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h2>GRUPO D</h2>
+      <table>
+        <thead>
+          <tr>
+            <td>CLASSIFICAÇÃO</td>
+            <td>P</td>
+            <td>J</td>
+            <td>V</td>
+            <td>E</td>
+            <td>D</td>
+            <td>GP</td>
+            <td>GC</td>
+            <td>SG</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Austrália</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Dinamarca</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>França</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Tunísia</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h2>GRUPO E</h2>
+      <table>
+        <thead>
+          <tr>
+            <td>CLASSIFICAÇÃO</td>
+            <td>P</td>
+            <td>J</td>
+            <td>V</td>
+            <td>E</td>
+            <td>D</td>
+            <td>GP</td>
+            <td>GC</td>
+            <td>SG</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alemanha</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Costa Rica</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Espanha</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Japão</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h2>GRUPO F</h2>
+      <table>
+        <thead>
+          <tr>
+            <td>CLASSIFICAÇÃO</td>
+            <td>P</td>
+            <td>J</td>
+            <td>V</td>
+            <td>E</td>
+            <td>D</td>
+            <td>GP</td>
+            <td>GC</td>
+            <td>SG</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bélgica</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Canadá</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Croácia</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Marrocos</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h2>GRUPO G</h2>
+      <table>
+        <thead>
+          <tr>
+            <td>CLASSIFICAÇÃO</td>
+            <td>P</td>
+            <td>J</td>
+            <td>V</td>
+            <td>E</td>
+            <td>D</td>
+            <td>GP</td>
+            <td>GC</td>
+            <td>SG</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Brasil</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Camarões</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Suiça</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Sérvia</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h2>GRUPO H</h2>
+      <table>
+        <thead>
+          <tr>
+            <td>CLASSIFICAÇÃO</td>
+            <td>P</td>
+            <td>J</td>
+            <td>V</td>
+            <td>E</td>
+            <td>D</td>
+            <td>GP</td>
+            <td>GC</td>
+            <td>SG</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Coréia do Sul</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Gana</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Portugal</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Uruguai</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <div class="footer">
+  <img src="assets/img/Sportsmaster-Merch-Fifa-World-Cup-Qatar-2022-Shirt.png" alt="">
+    <ul>
+      <li><a href="#">seleções</a></li>
+      <li>|</li>
+      <li><a href="#">tabela</a></li>
+      <li>|</li>
+      <li><a href="./faleconosco.html">fale conosco</a></li>
+    </ul>
+  <span class="icon"> 
+  <h1><a href="#"><i class="fa-brands fa-whatsapp"></i></a></h1>
+  <h1><a href="#"><i class="fa-brands fa-twitter"></i></a></h1>
+  <h1><a href="#"><i class="fa-brands fa-facebook"></i></a></h1>
+  <h1><a href="#"><i class="fa-brands fa-instagram"></i></a></h1>
+</span>
+</div>
+  
+</body>
+
+</html>
